@@ -1,0 +1,33 @@
+{
+  "name": "cubeins",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.5.2",
+    "@mantine/core": "^7.9.2",
+    "@mantine/hooks": "^7.9.2",
+    "@mantinex/dev-icons": "^1.0.2",
+    "bootstrap": "^5.3.3",
+    "framer-motion": "^11.2.6",
+    "react": "^18.3.1",
+    "react-bootstrap": "^2.10.2",
+    "react-dom": "^18.3.1",
+    "react-icons": "^5.2.1",
+    "react-router-dom": "^6.23.1",
+    "react-spring": "^9.7.3"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.3",
+    "@types/react-bootstrap": "^0.32.36",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^3.1.0",
+    "typescript": "^4.9.3",
+    "vite": "^4.1.0"
+  }
+}
