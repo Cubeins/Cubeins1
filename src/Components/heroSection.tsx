@@ -1,146 +1,98 @@
-import React, { useState, useEffect } from "react";
-import { Col, Container, Row, Image } from "react-bootstrap";
-import yourImage from "./images/Cubeins.png";
+import React from 'react';
+import styled from 'styled-components';
+import IMG from "./images/cubeins1.png";
 
-interface BallPosition {
-  x: number;
-  y: number;
-}
+const HeroContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  background: linear-gradient(135deg, #000000, #000000);
+  color: white;
+  position: relative;
+  text-align: center;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    height: 100vh;
+  }
+`;
+
+const HeroContent = styled.div`
+  max-width: 600px;
+  z-index: 1;
+  margin-bottom: 50px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 0;
+    margin-right: 50px;
+    text-align: left;
+  }
+`;
+
+const HeroTitle = styled.h1`
+  font-size: 3.5em;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+`;
+
+const HeroSubtitle = styled.p`
+  font-size: 1.5em;
+  margin-bottom: 40px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+`;
+
+const HeroButton = styled.button`
+  font-size: 1.2em;
+  padding: 15px 40px;
+  color: #3b82f6;
+  background-color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+`;
+
+const HeroImageContainer = styled.div`
+  width: 100%;
+
+  @media (min-width: 768px) {
+    width: 40%;
+  }
+`;
+
+const HeroImage = styled.img`
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 50%;
+  opacity: 0.9;
+`;
 
 function HeroSection() {
-  const [ballPosition, setBallPosition] = useState<BallPosition>({
-    x: 0,
-    y: 0,
-  });
-
-  const handleMouseMove = (e: { clientX: number; clientY: number }) => {
-    setBallPosition({
-      x: e.clientX - 5,
-      y: e.clientY - 5,
-    });
+  const handleLearnMoreClick = () => {
+    // Scroll to the next section (you can adjust the value according to your needs)
+    window.scrollBy({ top: window.innerHeight, behavior: 'smooth' });
   };
-
-  useEffect(() => {
-    window.addEventListener("mousemove", handleMouseMove);
-    return () => {
-      window.removeEventListener("mousemove", handleMouseMove);
-    };
-  }, []);
-
-  const contentStyle = {
-    // backgroundColor: "rgba(0, 0, 0, 0.0)",
-    borderRadius: "10px",
-    color: "black",
-    padding: "50px",
-    // boxShadow: "0px 0px 25px -5px rgba(255,255,255,0.20)",
-  };
-
-  const heroStyles = `
-    .hero-section {
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      background-color: #ffffff;
-      color: black;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .animated-background {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: whitesmoke;
-      opacity: 0;
-      animation: backgroundAnimation 10s infinite linear;
-    }
-
-    @keyframes backgroundAnimation {
-      0% {
-        background-position: 0% 50%;
-      }
-      100% {
-        background-position: 100% 50%;
-      }
-    }
-
-    .ball {
-      width: 10px;
-      height: 10px;
-      border-radius: 100%;
-      position: absolute;
-      top: ${ballPosition.y}px;
-      left: ${ballPosition.x}px;
-      transition: top 2s ease, left 2s ease;
-      background: blue;
-      box-shadow:
-        0 5px 15px rgba(255, 255, 255, 0.1),
-        0 -5px 15px rgba(255, 255, 255, 0.1),
-        10px 0 15px rgba(255, 255, 255, 0.1),
-        -10px 0 15px rgba(255, 255, 255, 0.1);
-    }
-
-    @media (max-width: 768px) {
-      .ball {
-        width: 15px;
-        height: 15px;
-      }
-    }
-
-    @media (max-width: 576px) {
-      .ball {
-        width: 10px;
-        height: 10px;
-      }
-
-      .animated-background {
-        opacity: 0;
-      }
-    }
-  `;
 
   return (
-    <>
-      <style>{heroStyles}</style>
-      <section className="hero-section">
-        <div className="animated-background" />
-        <Container>
-          <Row className="align-items-center">
-            <Col xs={12} md={4} className="text-center mb-3 mb-md-0">
-              <Image
-                src={yourImage} // Replace with the actual path to your image
-                alt="CUBEINS"
-                fluid
-                className="rounded-circle"
-                style={{ width: "400px", height: "400px", maxWidth: "100%" }}
-              />
-            </Col>
-            <Col xs={12} md={8} style={contentStyle}>
-              <h1 className="text-center display-1" style={{ color: "#355E93" }}>
-                CUBEINS
-              </h1>
-              <hr className="my-4" style={{ borderColor: "grey" }} />
-
-              <p
-                className="text-center "
-                style={{
-                  fontSize: "1.0rem",
-                  marginBottom: "20px",
-                  marginTop: "20px",
-                }}
-              >
-                Empowering Young Minds.
-              </p>
-            </Col>
-          </Row>
-        </Container>
-        <div className="ball" />
-      </section>
-    </>
+    <HeroContainer>
+      <HeroContent>
+        <HeroTitle>Cubeins</HeroTitle>
+        <hr />
+        <HeroSubtitle>Empowering Young Minds</HeroSubtitle>
+        <HeroButton onClick={handleLearnMoreClick}>Learn More</HeroButton>
+      </HeroContent>
+      <HeroImageContainer>
+        <HeroImage src={IMG} alt="Cubeins Logo" />
+      </HeroImageContainer>
+    </HeroContainer>
   );
 }
 

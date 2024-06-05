@@ -21,79 +21,50 @@ function Services2() {
   };
 
   const colStyle = {
-    // textAlign: "center",
     marginBottom: "30px",
   };
 
   return (
     <div style={sectionStyle}>
       <Container>
-        <h2 className=" mb-4">Our Services</h2>
-        <p className=" mb-5" style={textStyle}>
-          We offer a wide range of technology solutions to meet the needs of our
-          diverse client base. Our services are designed to help your business
-          thrive in the digital age.
-        </p>
+        <h2 className="mb-4">Our Services</h2>
+        <hr />
         <Row>
-          <Col xs={12} md={6} lg={4} style={colStyle}>
+          <Col xs={12} sm={6} lg={6} style={colStyle}>
             <div style={iconStyle}>
-              <i className="fas fa-shop"></i>
+              <i className="fas fa-shopping-cart"></i>
             </div>
             <h3>E-Commerce</h3>
             <p style={textStyle}>
-              Leverage the power of e-commerce to reach a global audience,
-              enhance customer engagement, and drive sales growth with our
-              tailored solutions.
+              Reach global markets, enhance customer engagement, and drive sales with our tailored e-commerce solutions.
             </p>
           </Col>
-          <Col xs={12} md={6} lg={4} style={colStyle}>
+          <Col xs={12} sm={6} lg={6} style={colStyle}>
             <div style={iconStyle}>
               <i className="fas fa-shield-alt"></i>
             </div>
             <h3>Cybersecurity</h3>
             <p style={textStyle}>
-              Protect your digital assets with our comprehensive cybersecurity
-              solutions, designed to safeguard against evolving threats.
+              Protect your digital assets with our comprehensive cybersecurity solutions against evolving threats.
             </p>
           </Col>
-          <Col xs={12} md={6} lg={4} style={colStyle}>
+          <Col xs={12} sm={6} lg={6} style={colStyle}>
             <div style={iconStyle}>
               <i className="fas fa-code"></i>
             </div>
             <h3>Software Development</h3>
             <p style={textStyle}>
-              Develop custom software solutions tailored to your specific
-              business needs, from web applications to mobile apps.
+              Get custom software solutions tailored to your business needs, from web applications to mobile apps.
             </p>
           </Col>
-          <Col xs={12} md={6} lg={4} style={colStyle}>
-            <div style={iconStyle}>
-              <i className="fas fa-cogs"></i>
-            </div>
-            <h3>IT Consulting</h3>
-            <p style={textStyle}>
-              Our experts provide strategic IT consulting to help you navigate
-              complex technology landscapes and achieve your business goals.
-            </p>
-          </Col>
-          <Col xs={12} md={6} lg={4} style={colStyle}>
+
+          <Col xs={12} sm={6} lg={6} style={colStyle}>
             <div style={iconStyle}>
               <i className="fas fa-network-wired"></i>
             </div>
             <h3>Network Solutions</h3>
             <p style={textStyle}>
-              Design and implement robust network solutions that ensure seamless
-              connectivity and high performance for your enterprise.
-            </p>
-          </Col>
-          <Col xs={12} md={6} lg={4} style={colStyle}>
-            <div style={iconStyle}>
-              <i className="fas fa-chart-line"></i>
-            </div>
-            <h3>Data Analytics</h3>
-            <p style={textStyle}>
-              Harness the power of data with our analytics services, turning raw
-              data into actionable insights to drive informed decision-making.
+              Design and implement robust network solutions for seamless connectivity and performance.
             </p>
           </Col>
         </Row>

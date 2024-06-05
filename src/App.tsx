@@ -10,6 +10,7 @@ import Team from "./Components/team";
 import ServicesSection from "./Components/services";
 import ContactMeSection from "./Components/contact";
 import CTASection from "./Components/colaberation";
+import InternshipCTASection from "./Internship";
 
 function App() {
   const [showModal, setShowModal] = useState(false);
@@ -29,24 +30,21 @@ function App() {
       <div>
         <HeroSection></HeroSection>
       </div>
-      <div>
-        <Services2></Services2>
-      </div>
+
       <div>
         <About></About>
-      </div>
-      <div>
-        <CTASection></CTASection>
       </div>
       <div>
         <Team></Team>
       </div>
       <div>
-        <CurrentProjects></CurrentProjects>
+      <Services2></Services2>
+      <ServicesSection></ServicesSection>
       </div>
+      
       <div>
-        <ServicesSection></ServicesSection>
-      </div>
+        <CTASection></CTASection>
+      </div> 
 
       <div>
         <ContactMeSection></ContactMeSection>

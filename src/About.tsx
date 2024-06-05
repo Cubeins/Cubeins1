@@ -6,18 +6,23 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 
 function AboutUs() {
   const sectionStyle = {
-    backgroundColor: "#1e1e1e",
-    color: "white",
+    backgroundColor: "#f8f9fa",
+    color: "#495057",
     padding: "50px 0",
+    borderRadius: "10px",
+    boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.1)",
   };
 
   const iconStyle = {
-    fontSize: "2rem",
+    fontSize: "3rem",
     marginBottom: "15px",
+    color: "#007bff",
   };
 
   const textStyle = {
-    color: "#b0b0b0",
+    color: "#6c757d", // Adjusted text color for better readability
+    lineHeight: "1.6",
+    marginBottom: "20px", // Added margin bottom for better separation between sections
   };
 
   const colStyle = {
@@ -27,45 +32,57 @@ function AboutUs() {
   return (
     <div style={sectionStyle}>
       <Container>
-        <h2 className="mb-4 ">About Us</h2>
+        <h1 className="mb-4">About Us</h1>
+        <hr />
         <p className="mb-5" style={textStyle}>
-          We are two entrepreneurs dedicated to making a difference in the tech industry. One of us is a Data Scientist based in England, and the other is a Cyber Security Analyst in Bangalore. Together, we have founded this tech company with the mission to innovate and create cutting-edge technology solutions that meet the needs of our diverse client base.
+          We are dedicated to revolutionizing the EV car charging industry in India. With a mission to establish a comprehensive and accessible EV charging network, we aim to promote the widespread adoption of electric vehicles and contribute to a greener future.
         </p>
+
+        <h3 className="mb-3">Our Mission</h3>
+        <p className="mb-5" style={textStyle}>
+          Our mission is to develop innovative and efficient EV charging solutions, ensuring seamless charging experiences for EV owners across India.
+        </p>
+
+        <h3 className="mb-3">Executive Summary</h3>
+        <p className="mb-5" style={textStyle}>
+          Our company is strategically positioned to address the growing need for reliable EV charging infrastructure in India. With a population of 1.3 billion and a rapidly expanding EV market, we aim to lead the industry by providing cutting-edge charging technology and exceptional customer service.
+        </p>
+
         <Row>
           <Col xs={12} md={6} lg={3} style={colStyle}>
             <div style={iconStyle}>
-              <i className="fas fa-lightbulb"></i>
+              <i className="fas fa-charging-station"></i>
             </div>
-            <h3>Energy Saving</h3>
+            <h3>Fast Charging</h3>
             <p style={textStyle}>
-              Our solutions are designed with energy efficiency in mind, ensuring that we not only help businesses save costs but also contribute to a sustainable future.
+              Our solutions provide fast and efficient charging for electric vehicles, minimizing charging times and maximizing convenience for EV owners.
             </p>
           </Col>
           <Col xs={12} md={6} lg={3} style={colStyle}>
             <div style={iconStyle}>
-              <i className="fas fa-bolt"></i>
+              <i className="fas fa-plug"></i>
             </div>
-            <h3>Smart Technology</h3>
+            <h3>Reliable Infrastructure</h3>
             <p style={textStyle}>
-              Leveraging the latest advancements in technology, we create smart solutions that are both innovative and practical, helping businesses stay ahead of the curve.
+              We develop and install robust EV charging infrastructure, ensuring reliability and accessibility for EV owners across India.
             </p>
           </Col>
           <Col xs={12} md={6} lg={3} style={colStyle}>
             <div style={iconStyle}>
-              <i className="fas fa-leaf"></i>
+              <i className="fas fa-battery-full"></i>
             </div>
-            <h3>Eco System</h3>
+            <h3>Advanced Technology</h3>
             <p style={textStyle}>
-              We are committed to developing products that are environmentally friendly, promoting an ecosystem where technology and nature can coexist harmoniously.
+              Leveraging the latest advancements in technology, we offer smart charging solutions that optimize energy usage and reduce environmental impact.
             </p>
           </Col>
           <Col xs={12} md={6} lg={3} style={colStyle}>
             <div style={iconStyle}>
-              <i className="fas fa-headset"></i>
+              <i className="fas fa-users"></i>
             </div>
             <h3>Customer Support</h3>
             <p style={textStyle}>
-              Our customer support team is always ready to assist, ensuring that our clients receive the best possible service and support at all times.
+              Our dedicated customer support team provides prompt assistance and ensures a seamless experience for all our clients.
             </p>
           </Col>
         </Row>
