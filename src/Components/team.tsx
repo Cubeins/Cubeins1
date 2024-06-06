@@ -1,7 +1,7 @@
 import React from "react";
 import { Col, Container, Row, Card } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import hassanImg from "./images/musroom.jpg"; // Replace with actual image path
+import hassanImg from "./images/hassan.jpg"; // Replace with actual image path
 import wallaceImg from "./images/wallace.jpg"; // Replace with actual image path
 
 function Team() {
