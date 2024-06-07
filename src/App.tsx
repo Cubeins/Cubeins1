@@ -1,56 +1,69 @@
-import React, { useState } from "react";
-import { Button, Modal, Form } from "react-bootstrap"; // Importing Button and Modal from react-bootstrap
+import React, { useState, useCallback, Suspense, useEffect } from "react";
+import { Button, Modal, Form } from "react-bootstrap";
+import SnakeGame from "./snake";
 
-import About from "./About";
-import Hero from "./Components/Hero";
-import CurrentProjects from "./Components/currentprojects";
-import HeroSection from "./Components/heroSection";
-import Services2 from "./Components/services2";
-import Team from "./Components/team";
-import ServicesSection from "./Components/services";
-import ContactMeSection from "./Components/contact";
-import CTASection from "./Components/colaberation";
-import InternshipCTASection from "./Internship";
+const About = React.lazy(() => import("./About"));
+const Hero = React.lazy(() => import("./Components/Hero"));
+const CurrentProjects = React.lazy(() => import("./Components/currentprojects"));
+const HeroSection = React.lazy(() => import("./Components/heroSection"));
+const Services2 = React.lazy(() => import("./Components/services2"));
+const Team = React.lazy(() => import("./Components/team"));
+const ServicesSection = React.lazy(() => import("./Components/services"));
+const ContactMeSection = React.lazy(() => import("./Components/contact"));
+const CTASection = React.lazy(() => import("./Components/colaberation"));
+const InternshipCTASection = React.lazy(() => import("./Internship"));
+const LoadingScreen = React.lazy(() => import("./Components/loading")); // Make sure the path is correct
 
-function App() {
+const App: React.FC = () => {
   const [showModal, setShowModal] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
-  const handleShowModal = () => setShowModal(true);
-  const handleCloseModal = () => setShowModal(false);
-
-  const handleSendMessage = () => {
+  const handleShowModal = useCallback(() => setShowModal(true), []);
+  const handleCloseModal = useCallback(() => setShowModal(false), []);
+  const handleSendMessage = useCallback(() => {
     // Implement sending message functionality here
-    // For example, you can send a request to your backend API
-    // to handle the message submission
     handleCloseModal();
+  }, [handleCloseModal]);
+
+  const handleLoadingComplete = () => {
+    setIsLoading(false);
   };
 
+  if (isLoading) {
+    return (
+      <Suspense fallback={<div>Loading...</div>}>
+        <LoadingScreen onComplete={handleLoadingComplete} />
+      </Suspense>
+    );
+  }
+
   return (
-    <>
+    <Suspense fallback={<div>Loading...</div>}>
       <div>
-        <HeroSection></HeroSection>
+        <HeroSection />
       </div>
 
       <div>
-        <About></About>
+        <About />
       </div>
       <div>
-        <Team></Team>
+        <Team />
       </div>
       <div>
-      <Services2></Services2>
-      <ServicesSection></ServicesSection>
-      </div>
-      
-      <div>
-        <CTASection></CTASection>
-      </div> 
-
-      <div>
-        <ContactMeSection></ContactMeSection>
+        <Services2 />
+        <ServicesSection />
       </div>
 
-      <Button
+      <div>
+        <CTASection />
+      </div>
+     
+
+      <div>
+        <ContactMeSection />
+      </div>
+
+      {/* <Button
         onClick={handleShowModal}
         style={{
           position: "fixed",
@@ -100,9 +113,9 @@ function App() {
             Send
           </Button>
         </Modal.Footer>
-      </Modal>
-    </>
+      </Modal> */}
+    </Suspense>
   );
-}
+};
 
 export default App;

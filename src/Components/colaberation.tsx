@@ -17,7 +17,7 @@ const CTASection = () => {
 
   const handleContactClick = () => {
     // Replace with your email address
-    const email = "wallacebusiness42@gmail.com";
+    const email = "cubeins69@gmail.com";
     window.location.href = `mailto:${email}`;
   };
 
@@ -25,16 +25,16 @@ const CTASection = () => {
     <section style={gradientStyle} className="">
       <Container>
         <h2 className="display-1 mb-4" style={titleStyle}>
-          Ready to start your next project? Contact me for a consultation.
+          Ready to start your next project? Contact us for a consultation.
         </h2>
-        <p className="lead mb-4">Join me now and enjoy an additional 5% off.</p>
+        <p className="lead mb-4">Join us now and enjoy an additional 5% off.</p>
         <Button
           variant="outline-warning"
           size="lg"
           style={{ color: "white" }}
           onClick={handleContactClick}
         >
-          Contact Me
+          Contact Us For Consultation.
         </Button>
       </Container>
     </section>

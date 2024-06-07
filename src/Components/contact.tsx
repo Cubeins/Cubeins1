@@ -23,52 +23,25 @@ const ContactMeSection = () => {
       <Container>
         <h1 className="mb-4">Contact Us.</h1>
         <hr className="my-4" style={{ borderColor: "#FFCA2C" }} />
-        <p className="mb-4">
-          Feel free to reach out to me for any inquiries or just to say hi!
-        </p>
+        <p className="mb-4">Feel free to reach out to me for any inquiries.</p>
         <Row className="contact-details">
           <Col md={6} lg={6}>
             <div className="mb-3">
               <p style={{ color: "#FFFFFF" }}>
-                <FaEnvelope /> Email: wallacebusiness42@gmail.com
+                <FaEnvelope /> Email: cubeins69@gmail.com
               </p>
             </div>
-            <div className="mb-3">
-              <p style={{ color: "#FFFFFF" }}>
-                <FaTwitter /> Twitter:{" "}
-                <a
-                  href="https://twitter.com/calmque"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ color: "#FFFFFF" }}
-                >
-                  @calmque
-                </a>
-              </p>
-            </div>
-            <div className="mb-3">
-              <p style={{ color: "#FFFFFF" }}>
-                <FaLinkedin /> LinkedIn:{" "}
-                <a
-                  href="https://www.linkedin.com/in/wallace-dsouza-8b52121ba?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ color: "#FFFFFF" }}
-                >
-                  Wallace Scott
-                </a>
-              </p>
-            </div>
+
             <div>
               <p style={{ color: "#FFFFFF" }}>
                 <FaInstagram /> Instagram:{" "}
                 <a
-                  href="https://www.instagram.com/sc.walace?igsh=MWtyZHNrMnNwdXNzeg=="
+                  href="https://www.instagram.com/cubeins?igsh=MWtyZHNrMnNwdXNzeg=="
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{ color: "#FFFFFF" }}
                 >
-                  sc.walace
+                  cubeins
                 </a>
               </p>
             </div>
