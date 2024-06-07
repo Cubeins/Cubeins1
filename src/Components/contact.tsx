@@ -22,7 +22,7 @@ const ContactMeSection = () => {
     >
       <Container>
         <h1 className="mb-4">Contact Us.</h1>
-        <hr className="my-4" style={{ borderColor: "#FFCA2C" }} />
+        <hr className="my-4" style={{ borderColor: "white" }} />
         <p className="mb-4">Feel free to reach out to me for any inquiries.</p>
         <Row className="contact-details">
           <Col md={6} lg={6}>

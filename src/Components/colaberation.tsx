@@ -29,7 +29,7 @@ const CTASection = () => {
         </h2>
         <p className="lead mb-4">Join us now and enjoy an additional 5% off.</p>
         <Button
-          variant="outline-warning"
+          variant="outline-primary"
           size="lg"
           style={{ color: "white" }}
           onClick={handleContactClick}
