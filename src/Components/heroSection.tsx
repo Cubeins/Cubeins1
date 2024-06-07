@@ -1,18 +1,6 @@
-import React from 'react';
-import styled, { keyframes } from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 import IMG from "./images/cubeins1.png";
-
-// Keyframes for logo animation
-const slideUp = keyframes`
-  0% {
-    transform: translateY(100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-`;
 
 const HeroContainer = styled.div`
   display: flex;
@@ -57,11 +45,10 @@ const HeroSubtitle = styled.p`
 `;
 
 const HeroButton = styled.button`
-
   font-size: 1.2em;
   padding: 15px 40px;
-  color: white;
-  background-color: #3b82f6;
+  color: #3b82f6;
+  background-color: white;
   border: none;
   border-radius: 10px;
   cursor: pointer;
@@ -75,8 +62,6 @@ const HeroButton = styled.button`
 
 const HeroImageContainer = styled.div`
   width: 100%;
-  display: flex;
-  justify-content: center;
 
   @media (min-width: 768px) {
     width: 40%;
@@ -87,16 +72,13 @@ const HeroImage = styled.img`
   width: 70%;
   height: auto;
   border-top-left-radius: 50%;
-  border-bottom-right-radius: 50%;
   opacity: 0.9;
-  box-shadow: 0 0px 75px rgba(31, 109, 228, 0.5);
-  animation: ${slideUp} 1s ease-out;
 `;
 
 function HeroSection() {
   const handleLearnMoreClick = () => {
     // Scroll to the next section (you can adjust the value according to your needs)
-    window.scrollBy({ top: window.innerHeight, behavior: 'smooth' });
+    window.scrollBy({ top: window.innerHeight, behavior: "smooth" });
   };
 
   return (
