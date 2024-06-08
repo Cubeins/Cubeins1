@@ -1,32 +1,28 @@
 import React, { useState, useCallback, Suspense, useEffect } from "react";
-import { Button, Modal, Form } from "react-bootstrap";
-import SnakeGame from "./snake";
+import { Navbar, Nav, Container } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css"; // Make sure Bootstrap CSS is imported
+import HeroSection2 from "./Components/Hero";
 
 const About = React.lazy(() => import("./About"));
-const Hero = React.lazy(() => import("./Components/Hero"));
-const CurrentProjects = React.lazy(() => import("./Components/currentprojects"));
-const HeroSection = React.lazy(() => import("./Components/heroSection"));
-const Services2 = React.lazy(() => import("./Components/services2"));
 const Team = React.lazy(() => import("./Components/team"));
+const Services2 = React.lazy(() => import("./Components/services2"));
 const ServicesSection = React.lazy(() => import("./Components/services"));
 const ContactMeSection = React.lazy(() => import("./Components/contact"));
 const CTASection = React.lazy(() => import("./Components/colaberation"));
-const InternshipCTASection = React.lazy(() => import("./Internship"));
 const LoadingScreen = React.lazy(() => import("./Components/loading")); // Make sure the path is correct
 
 const App: React.FC = () => {
-  const [showModal, setShowModal] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
-
-  const handleShowModal = useCallback(() => setShowModal(true), []);
-  const handleCloseModal = useCallback(() => setShowModal(false), []);
-  const handleSendMessage = useCallback(() => {
-    // Implement sending message functionality here
-    handleCloseModal();
-  }, [handleCloseModal]);
 
   const handleLoadingComplete = () => {
     setIsLoading(false);
+  };
+
+  const scrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   if (isLoading) {
@@ -40,80 +36,53 @@ const App: React.FC = () => {
   return (
     <Suspense fallback={<div>Loading...</div>}>
       <div>
-        <HeroSection />
+        <Navbar bg="light" expand="lg" sticky="top">
+          <Container>
+            {/* <Navbar.Brand href="#">Cubeins</Navbar.Brand> */}
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse
+              id="basic-navbar-nav"
+              className="justify-content-center"
+            >
+              <Nav>
+                <Nav.Link onClick={() => scrollToSection("hero-section")}>
+                  Home
+                </Nav.Link>
+                <Nav.Link onClick={() => scrollToSection("about-section")}>
+                  About
+                </Nav.Link>
+                <Nav.Link onClick={() => scrollToSection("team-section")}>
+                  Team
+                </Nav.Link>
+                <Nav.Link onClick={() => scrollToSection("services-section")}>
+                  Services
+                </Nav.Link>
+                <Nav.Link onClick={() => scrollToSection("contact-section")}>
+                  Contact
+                </Nav.Link>
+              </Nav>
+            </Navbar.Collapse>
+          </Container>
+        </Navbar>
+
+        <div id="hero-section">
+          <HeroSection2 />
+        </div>
+
+        <div id="about-section">
+          <About />
+        </div>
+        <div id="team-section">
+          <Team />
+        </div>
+        <div id="services-section">
+          <Services2 />
+          <ServicesSection />
+        </div>
+        <div id="contact-section">
+          <ContactMeSection />
+        </div>
       </div>
-
-      <div>
-        <About />
-      </div>
-      <div>
-        <Team />
-      </div>
-      <div>
-        <Services2 />
-        <ServicesSection />
-      </div>
-
-      <div>
-        <CTASection />
-      </div>
-     
-
-      <div>
-        <ContactMeSection />
-      </div>
-
-      {/* <Button
-        onClick={handleShowModal}
-        style={{
-          position: "fixed",
-          left: "20px",
-          bottom: "20px",
-          zIndex: "1000",
-          borderRadius: "50%", // Making the button round
-          width: "60px",
-          height: "60px",
-          fontSize: "30px",
-        }}
-      >
-        <i className="fas fa-envelope"></i>
-      </Button>
-
-      <Modal show={showModal} onHide={handleCloseModal}>
-        <Modal.Header closeButton>
-          <Modal.Title>Get in Touch</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <Form>
-            <Form.Group controlId="formName">
-              <Form.Label>Name</Form.Label>
-              <Form.Control type="text" placeholder="Enter your name" />
-            </Form.Group>
-
-            <Form.Group controlId="formEmail">
-              <Form.Label>Email</Form.Label>
-              <Form.Control type="email" placeholder="Enter your email" />
-            </Form.Group>
-
-            <Form.Group controlId="formMessage">
-              <Form.Label>Message</Form.Label>
-              <Form.Control
-                as="textarea"
-                rows={3}
-                placeholder="Enter your message"
-              />
-            </Form.Group>
-          </Form>
-        </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleCloseModal}>
-            Close
-          </Button>
-          <Button variant="primary" onClick={handleSendMessage}>
-            Send
-          </Button>
-        </Modal.Footer>
-      </Modal> */}
     </Suspense>
   );
 };
