@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import styled from "styled-components";
-import chargerImage from "./Components/images/product.jpg"; // Replace with your image path
+import chargerImage from "./Components/images/EV2.png"; // Replace with your image path
 
 const ProductSectionContainer = styled.section`
   padding: 80px 0;
@@ -59,7 +59,7 @@ const ProductImage = styled.img`
   width: 100%;
   max-width: 500px;
   height: auto;
-  border-radius: 5px;
+  border-radius: 10px;
   box-shadow: 0px 0px 15px -5px rgba(0, 0, 0, 0.2);
   margin-top: 20px;
 

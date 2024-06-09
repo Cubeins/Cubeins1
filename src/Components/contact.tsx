@@ -23,7 +23,7 @@ const ContactMeSection = () => {
       <Container>
         <h1 className="mb-4">Contact Us.</h1>
         <hr className="my-4" style={{ borderColor: "white" }} />
-        <p className="mb-4">Feel free to reach out to me for any inquiries.</p>
+        <p className="mb-4">Feel free to reach out to us.</p>
         <Row className="contact-details">
           <Col md={6} lg={6}>
             <div className="mb-3">
@@ -31,7 +31,19 @@ const ContactMeSection = () => {
                 <FaEnvelope /> Email: cubeins69@gmail.com
               </p>
             </div>
-
+            <div className="mb-3">
+              <p style={{ color: "#FFFFFF" }}>
+                <FaLinkedin /> LinkedIn:{" "}
+                <a
+                  href="https://www.linkedin.com/company/cubeins"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: "#FFFFFF" }}
+                >
+                  cubeins
+                </a>
+              </p>
+            </div>
             <div>
               <p style={{ color: "#FFFFFF" }}>
                 <FaInstagram /> Instagram:{" "}

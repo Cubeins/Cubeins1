@@ -82,7 +82,6 @@ const App: React.FC = () => {
         </div>
         <div id="services-section">
           <Services2 />
-          <ServicesSection />
         </div>
         <div>
         <CTASection/>

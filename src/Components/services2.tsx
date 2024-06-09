@@ -27,44 +27,43 @@ function Services2() {
   return (
     <div style={sectionStyle}>
       <Container>
-        <h2 className="mb-4">Our Services</h2>
+        <h2 className="mb-4">Our EV Charging Services</h2>
         <hr />
         <Row>
           <Col xs={12} sm={6} lg={6} style={colStyle}>
             <div style={iconStyle}>
-              <i className="fas fa-shopping-cart"></i>
+              <i className="fas fa-charging-station"></i>
             </div>
-            <h3>E-Commerce</h3>
+            <h3>Home Charging Solutions</h3>
             <p style={textStyle}>
-              Reach global markets, enhance customer engagement, and drive sales with our tailored e-commerce solutions.
+              Convenient and efficient home charging solutions for your electric vehicle, ensuring you start every day with a full charge.
             </p>
           </Col>
           <Col xs={12} sm={6} lg={6} style={colStyle}>
             <div style={iconStyle}>
-              <i className="fas fa-shield-alt"></i>
+              <i className="fas fa-industry"></i>
             </div>
-            <h3>Cybersecurity</h3>
+            <h3>Commercial Charging Stations</h3>
             <p style={textStyle}>
-              Protect your digital assets with our comprehensive cybersecurity solutions against evolving threats.
+              Scalable and reliable commercial charging stations designed for businesses, helping you cater to your customers' needs.
             </p>
           </Col>
           <Col xs={12} sm={6} lg={6} style={colStyle}>
             <div style={iconStyle}>
-              <i className="fas fa-code"></i>
+              <i className="fas fa-tools"></i>
             </div>
-            <h3>Software Development</h3>
+            <h3>Installation & Maintenance</h3>
             <p style={textStyle}>
-              Get custom software solutions tailored to your business needs, from web applications to mobile apps.
+              Professional installation and maintenance services to ensure your EV charging stations are always operational.
             </p>
           </Col>
-
           <Col xs={12} sm={6} lg={6} style={colStyle}>
             <div style={iconStyle}>
-              <i className="fas fa-network-wired"></i>
+              <i className="fas fa-solar-panel"></i>
             </div>
-            <h3>Network Solutions</h3>
+            <h3>Renewable Energy Integration</h3>
             <p style={textStyle}>
-              Design and implement robust network solutions for seamless connectivity and performance.
+              Integrate renewable energy sources with your EV charging infrastructure for a sustainable and eco-friendly solution.
             </p>
           </Col>
         </Row>

@@ -1,12 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import {
-  FaLaptop,
-  FaMobileAlt,
-  FaEllipsisH,
-  FaCog,
-  FaBullhorn,
-} from "react-icons/fa";
+import { FaLaptop, FaEllipsisH, FaCog } from "react-icons/fa";
 
 const ServicesSection = () => {
   const sectionStyle = {
@@ -44,28 +38,27 @@ const ServicesSection = () => {
           <Col md={4} className="mb-4">
             <div style={serviceStyle}>
               <FaLaptop style={iconStyle} />
-              <FaMobileAlt style={iconStyle} />
-              <h3 style={titleStyle}>Web/Mobile App Development</h3>
+              <h3 style={titleStyle}>Home Charging Solutions</h3>
               <p style={descriptionStyle}>
-                Building responsive and user-friendly web/mobile applications.
+                Convenient and efficient home charging solutions for your electric vehicle.
               </p>
             </div>
           </Col>
           <Col md={4} className="mb-4">
             <div style={serviceStyle}>
-              <FaBullhorn style={iconStyle} />
-              <h3 style={titleStyle}>Digital Marketing</h3>
+              <FaEllipsisH style={iconStyle} />
+              <h3 style={titleStyle}>Installation & Maintenance</h3>
               <p style={descriptionStyle}>
-                Promote your brand with effective digital marketing strategies.
+                Professional installation and maintenance services for your EV charging infrastructure.
               </p>
             </div>
           </Col>
           <Col md={4} className="mb-4">
             <div style={serviceStyle}>
               <FaCog style={iconStyle} />
-              <h3 style={titleStyle}>More</h3>
+              <h3 style={titleStyle}>Solar Integration</h3>
               <p style={descriptionStyle}>
-                Contact us for additional services and more options.
+                Implementing solar energy solutions to power your EV charging stations sustainably.
               </p>
             </div>
           </Col>
