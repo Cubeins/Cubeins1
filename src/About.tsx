@@ -43,10 +43,7 @@ function AboutUs() {
           Our mission is to develop innovative and efficient EV charging solutions, ensuring seamless charging experiences for EV owners across India.
         </p>
 
-        <h3 className="mb-3">Executive Summary</h3>
-        <p className="mb-5" style={textStyle}>
-          Our company is strategically positioned to address the growing need for reliable EV charging infrastructure in India. With a population of 1.3 billion and a rapidly expanding EV market, we aim to lead the industry by providing cutting-edge charging technology and exceptional customer service.
-        </p>
+        
 
         <Row>
           <Col xs={12} md={6} lg={3} style={colStyle}>

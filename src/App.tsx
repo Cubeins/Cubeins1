@@ -2,6 +2,7 @@ import React, { useState, useCallback, Suspense, useEffect } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css"; // Make sure Bootstrap CSS is imported
 import HeroSection2 from "./Components/Hero";
+import ProductSection from "./product";
 
 const About = React.lazy(() => import("./About"));
 const Team = React.lazy(() => import("./Components/team"));
@@ -71,6 +72,10 @@ const App: React.FC = () => {
 
         <div id="about-section">
           <About />
+        
+        </div>
+        <div>
+        <ProductSection></ProductSection>
         </div>
         <div id="team-section">
           <Team />
@@ -78,6 +83,9 @@ const App: React.FC = () => {
         <div id="services-section">
           <Services2 />
           <ServicesSection />
+        </div>
+        <div>
+        <CTASection/>
         </div>
         <div id="contact-section">
           <ContactMeSection />
